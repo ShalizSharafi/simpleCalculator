@@ -1,5 +1,6 @@
 # 🧮 Calculator
 
+demo: https://shalizsharafi.github.io/simpleCalculator/
 A lightweight, single-file calculator built with vanilla HTML, CSS, and JavaScript. No frameworks, no dependencies.
 
 <img width="300" height="300" alt="Screenshot 2026-06-19 at 12 54 42 AM" src="https://github.com/user-attachments/assets/32413308-e17a-4c7c-b36d-ba69923a5646" />
