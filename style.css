@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0f0f0f;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.calc-wrap {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  width: 320px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+}
+
+.calc-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.inputs-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.inputs-row input {
+  flex: 1;
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #e2e2e2;
+  font-family: 'DM Mono', monospace;
+  font-size: 22px;
+  font-weight: 300;
+  padding: 14px 12px;
+  text-align: right;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+  -moz-appearance: textfield;
+}
+.inputs-row input::-webkit-outer-spin-button,
+.inputs-row input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.inputs-row input:focus { border-color: #c8f542; }
+.inputs-row input::placeholder { color: #333; }
+
+.inputs-sep {
+  font-family: 'DM Mono', monospace;
+  font-size: 18px;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.ops-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.btn-op {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #c8f542;
+  font-family: 'DM Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, transform 0.08s;
+}
+.btn-op:hover {
+  background: rgba(200, 245, 66, 0.08);
+  border-color: #c8f542;
+}
+.btn-op:active {
+  transform: scale(0.94);
+  background: rgba(200, 245, 66, 0.15);
+}
+.btn-op.active {
+  background: rgba(200, 245, 66, 0.12);
+  border-color: #c8f542;
+}
+
+.btn-eq {
+  display: block;
+  width: 100%;
+  background: #c8f542;
+  border: none;
+  border-radius: 8px;
+  color: #0f0f0f;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.12s, transform 0.08s;
+}
+.btn-eq:hover { background: #d4f75e; }
+.btn-eq:active { transform: scale(0.97); background: #9fc22e; }
+
+.result-row {
+  border-top: 1px solid #2a2a2a;
+  padding-top: 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.result-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.result-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: #e2e2e2;
+  letter-spacing: -0.02em;
+}
+.result-value.has-value { color: #c8f542; }
+.result-value.error { color: #ff6b6b; font-size: 14px; }

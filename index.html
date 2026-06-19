@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="calc-wrap">
+    <div class="calc-label">Calculator</div>
+
+    <div class="inputs-row">
+      <input type="number" id="num1" placeholder="0">
+      <span class="inputs-sep" id="op-display">-</span>
+      <input type="number" id="num2" placeholder="0">
+    </div>
+
+    <div class="ops-row">
+      <button class="btn-op" onclick="setOp('+')">+</button>
+      <button class="btn-op" onclick="setOp('-')">−</button>
+      <button class="btn-op" onclick="setOp('/')">÷</button>
+      <button class="btn-op" onclick="setOp('*')">×</button>
+      <audio src="sound/jerryblessed-desktop-calculator-rubber-key-taps-544886_qB5fLd3i.mp3" id="sound1"></audio>
+    </div>
+
+    <button class="btn-eq" onclick="calculate()">Calculate</button>
+    <audio src="sound/sound2.mp3" id="sound2"></audio>
+    <div class="result-row">
+      <span class="result-tag">Result</span>
+      <span class="result-value" id="result"></span>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
